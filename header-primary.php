@@ -11,7 +11,7 @@
 
 							array(
 
-							'theme_location' => 'callout-menu',
+							'theme_location' => 'primary-menu',
 							'container' => 'div',
 							'container_class' => 'callout-menu',
 							'container_id'=> 'nav-callouts'
@@ -29,7 +29,7 @@
 
 						array(
 
-						'theme_location' => 'mobile-menu',
+						'theme_location' => 'primary-menu',
 						'container' => 'div',
 						'container_class' => 'mobile-menu',
 						'container_id' => 'mobile',

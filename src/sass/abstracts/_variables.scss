@@ -1,11 +1,10 @@
 // Font Imoports
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;400;500;600;700&family=Oswald:wght@300;400;500;700&display=swap');
-//Font Rules 
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');//Font Rules 
 //----font-family: 'Archivo', sans-serif;
 //----font-family: 'Oswald', sans-serif;
 // Font Family
-$font1: 'Oswald', sans-serif;
-$font2: 'Archivo', sans-serif;
+$font1: 'Jost', sans-serif;
+$font2: 'Jost', sans-serif;
 
 // Font Weight
 $base-font-size: 16px;
@@ -18,19 +17,19 @@ $light: 200;
 $thin: 100;
 
 // Colors
-$h1: #030303;
-$h2: #030303;
-$h3: #313145;
-$h4: #565656;
-$h5: #505074;
-$h6: #030303;
+$h1: #242526;
+$h2: #242526;
+$h3: #e94b24;
+$h4: #242526;
+$h5: #e94b24;
+$h6: #242526;
 $white: #ffffff;
 $black: #000000;
-$body: #7c7c7c;
-$link: #505074;
-$linkHover: #272727; 
+$body: #292929;
+$link: #e94b24;
+$linkHover: #828282; 
 $hoverColor: #858585;
-$buttonRoll: #313145;
+$buttonRoll: #e94b24;
 
 //Gradient Colors
 $colorTop: #2f2f30;

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Gallery Page
+Template Name: CPT Page
 */
 get_header();?>
 <?php get_header('primary');?>
