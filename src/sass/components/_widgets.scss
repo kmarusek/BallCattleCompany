@@ -1,0 +1,18 @@
+#footer-widget{
+    margin: 20px 0;
+    .centerwrap{
+        .textwidget{
+           p{
+                color: $white;
+        
+            }
+            a {
+                color: $white;
+                &:hover{
+                    color:#505074;
+                } 
+            }
+        }
+
+    }
+}

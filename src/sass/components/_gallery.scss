@@ -1,0 +1,88 @@
+.gallery-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+}
+.gallery-container .grid-sizer, .grid-item{
+    width: 25%;
+}
+.gallery-container .grid-item img {
+    width: 25vw;
+    height: 25vw;
+    border: 8px solid transparent;
+    object-fit: cover;
+}
+.gallery-container .grid-item a:hover{
+    opacity: 0.5;
+}
+
+/* Filter Bar */
+.isotope-filter {
+    background-color: #0f0f0f;
+}
+.isotope-filter {
+    width: 100%;
+}
+.isotope-filter ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+    text-align: center;
+}
+.isotope-filter h4 {
+    margin: 0;
+    font-size: calc(14pt + .8vw);    
+    font-family: $font2;
+    color: $white;
+    transform: skewX(45deg);
+}
+.isotope-filter li{
+    margin: 0;
+    display: inline-block;
+    padding: 20px 3.64vw;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    transform: skewX(-45deg);
+}
+.isotope-filter li:hover {
+    color: #fff;
+    background: $button2;
+    transition: all 1s ease;
+}
+.isotope-filter li.active {
+    color: #fff;
+    background: $button2;   
+}
+.lightboxOverlay{
+    outline: 0;
+}
+
+
+@media only screen and (max-width: 650px){
+    .isotope-filter ul{
+        padding: 0;
+    }
+    .isotope-filter h4 {
+        transform: skewX(0deg);
+    }
+    .isotope-filter li{
+        display: block;
+        transform: skewX(0deg);
+        text-align: center;
+        padding: 9px 3.64vw;
+        font-size: calc(13pt + .01vw);
+    }
+    .gallery-container .grid-sizer, .grid-item {
+        width: 50%;
+    }
+    .gallery-container .grid-item img {
+        width: 44vw;
+        height: 44vw;
+        border-right: 2px;
+        border-left: 2px;
+    }
+}

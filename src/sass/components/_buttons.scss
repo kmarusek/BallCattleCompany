@@ -1,0 +1,24 @@
+.buttonwrap{
+    display: flex;
+
+}
+.button.more-link {
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-decoration: none;
+    border: solid 2px transparent;
+    background-image: linear-gradient($colorTop, $colorBottom);
+    font-family: $font2;
+    font-size: calc(16px + .2vw);
+    text-transform: uppercase;
+    color: $white;
+    transition: .4s;
+}
+.button.more-link:hover {
+    background-image: linear-gradient($buttonRoll, $buttonRoll);
+    transition: .4s;
+}
+.button.more-link.content-button{
+    margin: 20px 5px 0 0;
+    line-height: 3;
+}

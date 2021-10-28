@@ -1,0 +1,33 @@
+//Node_Module Dependancy Assets Must Load First.
+// @import '/node_modules/bootstrap/scss/bootstrap';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import '/node_modules/owl.carousel/src/scss/owl.carousel';
+@import '/node_modules/magnific-popup/src/css/main';
+
+@import 'sass/abstracts/variables';
+@import 'sass/abstracts/mixins';
+@import 'sass/abstracts/breakpoints';
+
+@import 'sass/base/abovefooter';
+@import 'sass/base/resets';
+@import 'sass/base/typography';
+
+@import 'sass/vendor/flexslider';
+
+@import 'sass/components/buttons';
+@import 'sass/components/gallery';
+@import 'sass/components/testimonial-carousel';
+@import 'sass/components/widgets';
+
+@import 'sass/layout/navigation';
+@import 'sass/layout/content';
+@import 'sass/layout/forms';
+@import 'sass/layout/list';
+
+@import 'sass/pages/404';
+
+//Main custom styles must load last.
+@import 'sass/main';

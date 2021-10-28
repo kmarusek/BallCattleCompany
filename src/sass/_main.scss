@@ -1,0 +1,765 @@
+/*
+=====================================================================
+                         FRONT PAGE
+=====================================================================
+*/
+/* Banner Images 
+-------------------------------------------------------------------------------------------------*/
+.fp_hero {
+    position: relative;
+    background-size: 90%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    img {
+        margin: 0;
+    }
+    .top-triangle {
+        position: absolute;
+        width: 90%;
+    }
+    .bottom-triangle{
+        position: absolute;
+        right: 0;
+        bottom: -3vw;
+        width: 44%;
+    }
+}// End of Banner images
+/* Banner Top Content Split 
+------------------------------------------------------------------------------------------------*/
+.split.top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1.5vw;
+    position: relative;
+    
+    .leftside{
+        width: 55%;
+        overflow: hidden;
+        .slide-left {
+            margin-left: -2%;
+            transition-duration: 2s;
+        }
+        .slide-left.animation.is-visible{
+            animation: slide1 2s;
+            @keyframes slide1 {
+                from{
+                    margin-left: -100%;
+                }
+                to{
+                    margin-left: -2%;
+                }
+              }
+            }
+    }
+        .rightside{
+            width: 45%;
+            padding: 20px;
+            .centerbox{
+                width: 58%;
+            }
+            .title h4{
+                font-size: calc(16pt + 1.4vw);
+                font-weight: $semiBold;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                letter-spacing: 1.5px;
+                line-height: .8;
+            }
+            .subtitle h2 {
+                font-size: calc(32pt + 2.2vw);
+                font-weight: $bold;
+            }
+            .textwrap {
+                font-size: calc(13pt + .8vw);
+            }
+        }
+}
+/* Banner Bottom Content Split
+------------------------------------------------------------------------------------------------*/
+.split.bottom{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    
+    .leftside{
+        width: 70%;
+        margin: 7vw 0;
+        .centerbox{
+            width: 80%;
+            margin-left: auto;
+            .title h2{
+                font-size: calc(19pt + .8vw);
+            }
+            .subtitle h5{
+                font-size: calc(13pt + .8vw);
+                font-weight: $semiBold;
+            }
+        }
+    }
+    .rightside{
+        width: 30%;
+        margin-top: -8vw;
+        overflow: hidden;
+        .slide-right{
+            margin-left: 0%;
+        }
+        .slide-right.animation.is-visible{
+            animation: slide2 2s;
+            @keyframes slide2 {
+                from{
+                    margin-left: 100%;
+                }
+                to{
+                    margin-left: 0%;
+                }
+              }
+        }
+    }
+}
+/* PROCESS SECTION FRONT PAGE
+-------------------------------------------------------------------------------------------- */
+.fp_process{
+    background-color: #e8e8e8;
+    padding-bottom: 3vw;
+    .titlewrap{
+        h2{
+            font-size: calc(16pt + .8vw);
+            margin: 0 5%;
+            padding: 40px 0;
+        }
+    }
+    .centerbox{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        .itembox{
+            width: 14.23%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .imagewrapper{
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                width: 100%;
+                max-width: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h5{
+                    font-family: $font1;
+                    font-weight: $bold;
+                    line-height: 1;
+                    font-size: calc(18pt + 2vw);
+                    margin: 20px 0 20px;
+
+                }
+
+            }
+/* FRONT PAGE PROCESS NUMBERS SPINNING ANIMATION CLASS FOR JAVASCRIPT
+----------------------------------------------------------------------------------------------*/
+            .imagewrapper.animation.is-visible{
+                animation: spinanimation 2s linear 1;
+                animation-delay: calc(var(--animation-order) *500ms);
+                @keyframes spinanimation {
+                    100%{
+                        -webkit-transform: rotate(360deg); transform: rotate(360deg);
+                    }
+                }
+                h5.animation.is-visible {
+                    animation: stopspin 2s linear 1;
+                    animation-delay: calc(var(--animation-order) *500ms);
+                    @keyframes stopspin {
+                        100%{
+                            -webkit-transform: rotate(-360deg); transform: rotate(-360deg);
+                        }
+                    }
+                }
+            }
+            .title{
+                margin-top: 30px;
+                width: 100%;
+                text-align: center;
+               h2{
+                color: #272727;
+                font-family: $font2;
+                font-weight: $semiBold;
+                font-size: 2vw;
+               } 
+            }
+            .textwrap{
+                text-align: center;
+                margin: 0 10px;
+                p {
+                    font-size: calc(9pt + .2vw);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    
+}
+/*Call to Actions
+----------------------------------------------------------------------------------*/
+.fp_callouts{
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    .callout_anchor{
+        text-decoration: none;
+        flex-basis: 25%;
+        height: 42.5vw;
+        transition: all .8s ease 0s;
+        &:hover{
+            flex-basis: 51%;
+            transition: all .8s ease 0s;
+            .callout {
+                 .centerwrap .buttonwrap .button.more-link{
+                    background: #848484;
+                    border-color: #848484;
+            }
+            }
+        }  
+        .callout{
+            height: 100%;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+            // background-position: bottom center;
+            background-color: #000;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .backgroundimage{
+                position: absolute;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom center;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                opacity: .5;
+            }
+            .centerwrap{
+                z-index: 10;
+                .title h3{
+                    font-size: calc(15pt + .7vw);
+                    font-family: $font1;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+                .textwrap{
+                    max-width: 320px;
+                    margin: auto;
+                     p{
+                    color: $white;
+                    margin: 0 10px;
+                     }
+                }
+                .buttonwrap{
+                    justify-content: center;
+                    .button.more-link{
+                        background: transparent;
+                        border-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Service Callout
+-------------------------------------------------------------------------------------------------*/
+.fp_services{
+    .content{
+        background-image: linear-gradient(#020303, #2f2f2f);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0 2% 7vw;
+        .title {
+            margin: 3.5vw 0 .5vw;
+            width: 100%;
+            text-align: center;
+            h2{
+                color: $white; 
+                font-size: calc(16pt + 1.2vw);
+            }
+        }
+        .textwrap{
+            max-width: 1400px;
+            height: 100%;
+            p{
+                line-height: 1.7;
+                color: #929292;
+            }
+            a {
+                color: #c2c2c2;
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+    &.content2{
+        background-image: none;
+        height: unset;
+        padding: 5vw 2% 8vw;
+        .buttonwrap{
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+    }
+    .service_repeater{
+        position: relative;
+        height: 24vw;
+        .centerwrap{
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0 8%;
+            top: -2vw;
+            .itembox{
+                width: 23%;
+               
+                .overlay{
+                    background-color: #000000;
+                    overflow: hidden;
+                    img{
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-transition: .3s ease-in-out;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        opacity: .5;
+                        -webkit-transform: scale(1.3);
+                        transform: scale(1.3);
+                    }
+                }
+                }
+                .service_name h3{
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-family: $font1;
+                    font-size: calc(16pt + .8vw);
+                    color: #0b0b0b;
+                }
+            }
+        }
+    }
+}
+/*Parallax Banner
+--------------------------------------------------------------------------*/
+.fp_parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .split{
+        padding-top: 4vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .leftside{
+            width: 56%;
+            .centerbox{
+                width: 75%;
+                margin: auto;
+                padding: 4% 0;
+                .title h3{
+                    color: $white;
+                    font-family: $font1;
+                    font-size: calc(16pt + 1.2vw);
+                }
+                .textwrap p{
+                    color: #dddddd;
+                    font-weight: $medium;
+                    a{
+                        color: #8484a5;
+                        &:hover{
+                            color: $white;
+                        }
+                    }
+                }
+                .buttonwrap{
+                    justify-content: flex-start;
+                    margin-top: 2vw;
+                    .button.more-link{
+                        background: transparent;
+                        border-color: $white;
+                        &:hover{
+                           background: #848484;
+                           border-color: #848484; 
+                        }
+                    }
+                }
+            }    
+        }   
+        .rightside{
+            width: 44%;
+            img{
+                margin: 0 0 -5vw 0;
+            }
+        }
+    }
+}
+/*
+=====================================================================
+                         SUB PAGE
+=====================================================================
+*/
+/*Sub Page Hero
+--------------------------------------------------------------------------------------------*/
+.page_hero{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .itemwrap{
+            width: 25%;
+            &.itemwrap2{
+                width: 15%;
+            }
+            .titlewrap h2{
+                text-align: right;
+                font-size: calc(18px + 2vw);
+                color: $white;
+                margin: 0;
+            }
+            .textwrap h4{
+                text-align: left;
+                font-size: calc(12px + .35vw);
+                color: #f5f4f4;
+                font-weight: $normal;
+            }
+        }
+    }
+}
+/*Sub Page Content
+--------------------------------------------------------------------------------------------*/
+#content{
+    margin: 0;
+    &.callout_content{
+        margin-bottom: 20px;
+    }
+    .inner{
+        position: relative;
+        display: block;
+        line-height: 0;
+        background-color: #e8e8e8;
+        .contentwrap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 80%;
+            margin-left: -10vw;
+            background-color: #e8e8e8;
+            transform: skewX(-45deg);
+            .centerwrap{
+               transform: skewX(45deg); 
+               height: 100%;
+               padding: 2vw 12vw;
+               h1{
+                font-size: calc(15pt + .8vw);
+                margin: 0 0 5px;
+               }
+               h2{
+                font-size: calc(15pt + .8vw);
+                margin: 0 0 5px;
+               }
+               h3{ 
+                font-size: calc(12pt + .8vw);
+                margin: 0 0 5px;
+              }
+               p{
+                font-size: calc(10pt + .2vw);
+                line-height: 1.5em;
+               }
+            }
+        }
+        img{
+            margin-right: 0;
+            line-height: 0;
+        }
+    }
+}
+.content_repeater{
+    padding: 2vw 11vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .titlewrap{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        h2{
+            font-size: calc(15pt + .8vw);
+            margin: 0 0 5px; 
+            text-transform: uppercase; 
+        }
+    }
+    .itemwrap{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .itembox{
+            width: 48.5%;
+            margin-right: 3%;
+            margin-bottom: 30px;
+            &:nth-child(2n+2){
+                margin-right: 0;
+            }
+            .imagewrapper{
+                img{
+                    margin-left: 0;
+                }
+            }
+            .contentwrap{
+                .centerbox{
+                    .title{
+                        margin: 1.5vw 0;
+                        h2{
+                            font-size: calc(15pt + .8vw);
+                            text-align: center;   
+                        }
+                    }
+                    .textwrap{
+                       p{
+                        font-size: calc(10pt + .2vw);
+                        line-height: 1.5em;  
+                       } 
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+=====================================================================
+                        MEDIA QUERIES
+=====================================================================
+*/
+
+@include media("<=tablet"){
+/*FP Banner Responsive
+--------------------------------------------------------------------------------------------*/
+    .fp_hero .top-triangle, .fp_hero .bottom-triangle {
+        display: none;
+        
+    }
+    .split.top {
+        flex-direction: column-reverse;
+        .leftside {
+            width: 100%;
+            padding-top: 40px;
+            background-image: linear-gradient(to bottom right, #0d0d0e, #2f2f30);
+        }
+        .rightside {
+            width: 100%;
+            .centerbox{
+                width: 100%;
+            }
+        }
+    }
+    .split.bottom {
+        .leftside{
+            width: 100%;
+            .centerbox{
+               margin: auto; 
+            }
+        }
+        .rightside {
+            width: 100%;
+            margin-top: 0;
+            padding-top: 20px;
+            background-color: #313145;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 85%;
+                margin-right: 4%;
+            }
+        }
+    }
+/*Front Page Service Callout Section
+----------------------------------------------------------------------------*/
+    .fp_services{
+        .content{
+            padding: 0 4% 7vw;
+            &.content2{
+                padding: 5vw 4% 8vw;
+            }
+        }
+        .service_repeater{
+            height: auto;
+            .centerwrap{
+                position: relative;
+                margin: 2vw 8%;
+                top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .itembox{
+                    width: 48%;
+                }
+            }
+        }
+    }
+/*Front Page Parallax
+----------------------------------------------------------------------------*/
+    .fp_parallax {
+        .split{
+            .leftside{
+                width: 100%;
+            }
+            .rightside{
+                width: 100%;
+            }
+        }
+    }
+/* Sub Page Hero Banner
+----------------------------------------------------------------------------*/
+    .page_hero{
+        .content{
+            .itemwrap{
+                &.itemwrap1{
+                    width:100%;
+                    .titlewrap h2{
+                        text-align: center;
+                    }
+                }
+                &.itemwrap2{
+                    display: none;
+                }
+                &.itemwrap3{
+                    width: 50%;
+                }
+            }
+        }
+    }
+/*Sub Page Content
+--------------------------------------------------------------------------------------------*/
+    .content_repeater{
+        padding: 2vw 11vw;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .itembox{
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+            &:nth-child(2n+2){
+                margin-right: 0;
+            }
+        }   
+    }
+}
+ /*  
+=================================================================================================================
+END OF TABLET 
+=================================================================================================================
+*/
+@include media ("<=1050px"){
+    #content{
+        .inner{
+            .contentwrap {
+                width: 75%;
+                transform: skewX(0deg);
+                margin: 0;
+                .centerwrap{
+                    transform: skewX(0deg);
+                    padding: 2vw 2vw;
+                }
+            }
+        }
+    }
+}
+@include media("<=950px"){
+
+/*Process Section Front Page Responsive
+---------------------------------------------------------------------------*/
+    .fp_process .centerbox .itembox {
+        width: 50%;
+        padding: 20px;
+        margin-bottom: 20px;
+        .title h2{
+            font-size: 5vw;
+        }
+    }
+/*Call to Action
+---------------------------------------------------------------------------*/
+    .fp_callouts{
+        flex-wrap: wrap;
+        .callout_anchor{
+            flex-basis: 100%;
+            min-height: 450px;
+            &:hover {
+                flex-basis: 100%;
+            }
+            .callout .backgroundimage{
+                background-position: center center;
+            }
+        }
+    }
+/*Sub Page Content
+--------------------------------------------------------------------------------------------*/
+    #content{
+        .inner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+            .contentwrap{
+                position: relative;
+                width: 100%;
+                transform: skewX(0deg);
+                margin-left: 0;
+                .centerwrap{
+                    transform: skewX(0deg);
+                    padding: 5vw 5vw;
+                }
+            }
+            img{
+                margin-right: auto;
+            }
+        }
+    }
+    #content.callout_content{
+        .inner{
+            flex-direction: column-reverse;
+        }
+    }
+}/*
+=================================================================================================================
+END OF MAX 950PX
+=================================================================================================================
+*/

@@ -1,0 +1,30 @@
+{
+  "name": "abmcustom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "laravel-mix": "^6.0.25",
+    "sass": "^1.32.13",
+    "sass-loader": "^11.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
+    "flexslider": "^2.7.2",
+    "isotope-layout": "^3.0.6",
+    "magnific-popup": "^1.1.0",
+    "owl.carousel": "^2.3.4"
+  }
+}
