@@ -56,10 +56,7 @@ add_filter( 'use_widgets_block_editor', '__return_false' );// Disables the block
 register_nav_menus(
 
         array(
-
-                'top-menu' => 'Top Menu',
-                'callout-menu' => 'Top Menu Callouts',
-                'mobile-menu' => 'Mobile Menu',
+                'primary-menu' => 'Primary Menu',
                 'footer-menu' => 'Footer Menu',
                 'footer-media-menu' => 'Footer Social Media',
         )
@@ -69,12 +66,30 @@ register_nav_menus(
 //CUSTOM WIDGETS
 //-------------------------------------------------------------------------------------------------
 function above_theme_widget_init(){
-register_sidebar( array(
-        'name' => 'Footer Widget 1',
+register_sidebar( 
+        array(
+        'name' => 'Footer Widget Text Area',
         'id' => 'footer-widget-1',
-        'description' => 'Appears under footer menu.',
-        ) );
-           
+        'before_widget'=> '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        )
+);
+register_sidebar( 
+        array(
+        'name' => 'Footer Widget Menu',
+        'id' => 'footer-widget-2',
+        'before_widget'=> '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        )
+);
+register_sidebar( 
+        array(
+        'name' => 'Footer Widget Address',
+        'id' => 'footer-widget-3',
+        'before_widget'=> '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        )
+);
 }       
 add_action('widgets_init','above_theme_widget_init');
 
